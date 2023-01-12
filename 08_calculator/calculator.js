@@ -17,7 +17,10 @@ const sum = function(array) {
 };
 
 const multiply = function(array) {
-  let sum = 0; 
+  if (array.length == 0)
+    return 0; 
+
+  let sum = 1; 
 
   for (let i = 0; i < array.length; i++) {
     sum *= array[i];
@@ -39,8 +42,13 @@ const power = function(base, power) {
   return retval;
 };
 
-const factorial = function() {
-	
+const factorial = function(n) {
+  let retval = 1; 
+
+	for (let i = n; i > 0; i--)
+    retval *= i;
+
+  return retval;
 };
 
 // Do not edit below this line
